@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+<assembly><name>NagatoPaint</name></assembly>
+<members>
+<member name="T:AssemblyAttributes">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="P:Canvas.rtb">
+<summary>
+ 描画されるビットマップ
+</summary>
+</member>
+<member name="T:Canvas">
+
+</member>
+<member name="">
+
+</member>
+<member name="T:Model">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="P:Program.dp全体">
+<summary>
+ 画面全体
+</summary>
+</member>
+<member name="T:Program">
+
+</member>
+<member name="">
+
+</member>
+<member name="P:Sp左.sp左">
+<summary>
+ 左側のStackPanel
+</summary>
+</member>
+<member name="T:Sp左">
+
+</member>
+</members>
+</doc>

@@ -1,0 +1,9 @@
+C:\NagatoPaint\NagatoPaint\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\NagatoPaint\NagatoPaint\bin\Debug\NagatoPaint.XML
+C:\NagatoPaint\NagatoPaint\bin\Debug\NagatoPaint.exe
+C:\NagatoPaint\NagatoPaint\bin\Debug\NagatoPaint.pdb
+C:\NagatoPaint\NagatoPaint\obj\x86\Debug\NagatoPaint.exe
+C:\NagatoPaint\NagatoPaint\obj\x86\Debug\NagatoPaint.pdb
+C:\NagatoPaint\NagatoPaint\bin\Debug\NPLib.dll
+C:\NagatoPaint\NagatoPaint\bin\Debug\NPLib.pdb
+C:\NagatoPaint\NagatoPaint\bin\Debug\NPLib.xml
