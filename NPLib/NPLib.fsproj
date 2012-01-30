@@ -36,6 +36,7 @@
   <ItemGroup>
     <Compile Include="Base_Operators.fs" />
     <Compile Include="Base_Objects.fs" />
+    <Compile Include="Base_Math.fs" />
     <Compile Include="Base_Geometry.fs" />
     <Compile Include="Base_Color.fs" />
     <Compile Include="Base_Extensions.fs" />

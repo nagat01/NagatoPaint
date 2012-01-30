@@ -6,14 +6,19 @@ open Np
 
 
 /// 左側のStackPanel
-let spLeft = StackPanel()
+type SpLeft() as sp =
+  inherit StackPanel()
 
-let btnペンを選択 = 
-  let d = PenDrawRTB(label, rtb, SelectedColor)
-  let btn = Button(Content="ペンを選択") $ spLeft.add
-  btn.Click =>~ fun _ -> d.Toggler.Toggle
-  btn
+  let btnペンを選択 = 
+    let d = PenDrawRTB(label, rtb, SelectedColor)
+    let btn = Button(Content="ペンを選択") $ sp.add
+    btn.Click =>~ fun _ -> d.Toggler.Toggle
+    btn
 
-let colorPanel = 
-  ColorPanel(64., 64., SelectedColor)
-  $ spLeft.add
+  let colorPanel = 
+    ColorPanel(64., 64., SelectedColor)
+    $ sp.add
+
+  let rgbPanel =
+    RgbHslPanel(SelectedColor)
+    $ sp.add

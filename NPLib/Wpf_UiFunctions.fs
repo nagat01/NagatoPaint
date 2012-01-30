@@ -46,6 +46,13 @@ let canvas_po (po:Point) uie =
   Canvas.SetLeft(uie , po.X)
   Canvas.SetTop (uie , po.Y)
 
+/// スタックパネルの配置を水平にする
+let sphorizontal (sp:StackPanel) =
+  sp.Orientation <- Orientation.Horizontal
+
+/// スタックパネルの配置を垂直にする
+let spvertical (sp:StackPanel) =
+  sp.Orientation <- Orientation.Vertical
 
 /// ウィンドウをドラッグ可能にする
 let draggable_window (window:Window) =

@@ -14,7 +14,8 @@ open Np
 
 /// 画面全体
 let dpMain = DockPanel() $ bgco Colors.Black
-spLeft |> dpMain.addLeft
+/// 左側のスタックパネル
+let spLeft = SpLeft() $ dpMain.addLeft
 label |> dpMain.add
 
 let win = Window(Content=dpMain)
