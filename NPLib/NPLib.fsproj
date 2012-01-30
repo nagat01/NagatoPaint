@@ -37,12 +37,14 @@
     <Compile Include="Base_Operators.fs" />
     <Compile Include="Base_Objects.fs" />
     <Compile Include="Base_Geometry.fs" />
+    <Compile Include="Base_Color.fs" />
     <Compile Include="Base_Extensions.fs" />
     <Compile Include="Wpf_Utility.fs" />
     <Compile Include="Wpf_Extensions.fs" />
     <Compile Include="Wpf_UiFunctions.fs" />
     <Compile Include="MainUi_Window.fs" />
     <Compile Include="Ui_RTB.fs" />
+    <Compile Include="Ui_ColorPanel.fs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="mscorlib" />

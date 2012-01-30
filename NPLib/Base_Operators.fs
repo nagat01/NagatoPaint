@@ -14,4 +14,4 @@ let (<++>) o1 o2 =
 /// イベントを追加する
 let (=>) event f = event |> Observable.subscribe f
 
-let (<!) event f = event |> Observable.add f
+let (=>~) event f = event |> Observable.add f

@@ -153,6 +153,24 @@
 <member name="T:Np.Base_Operators">
 
 </member>
+<member name="M:Np.Color.toInt(System.Windows.Media.Color)">
+<summary>
+ Color -&gt; int
+</summary>
+</member>
+<member name="M:Np.Color.ofHex(System.Int32)">
+<summary>
+ 16進数 -&gt; Color
+</summary>
+</member>
+<member name="M:Np.Color.hexLetterToInt(System.Char)">
+<summary>
+ 16進数の文字 -&gt; int
+</summary>
+</member>
+<member name="T:Np.Color">
+
+</member>
 <member name="">
 
 </member>
@@ -177,6 +195,24 @@
 </summary>
 </member>
 <member name="T:Np.MainUi_Window">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="T:Np.Ui_ColorPanel.ColorPanel">
+<summary>
+ 現在の色を表示
+ 現在の色を数値で指定
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="T:Np.Ui_ColorPanel">
 
 </member>
 <member name="">

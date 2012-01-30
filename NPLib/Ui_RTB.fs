@@ -19,7 +19,7 @@ type RenderTargetBitmap with
 
 
 /// RenderTargetBitmapを塗る
-type PenDrawRTB (label:Label,rtb:RenderTargetBitmap) as __ =
+type PenDrawRTB (label:Label, rtb:RenderTargetBitmap, co:Color sv) as __ =
   /// 直前のマウスの位置
   let pPrev = obox()
 
@@ -34,7 +34,7 @@ type PenDrawRTB (label:Label,rtb:RenderTargetBitmap) as __ =
     label.MouseMove.toggled <| fun e ->
       let p = __.getMousePos e
       if pPrev.IsSome && e.LeftButton.HasFlag MouseButtonState.Pressed then
-        rtb.drawLine Colors.Black 1. pPrev.Value p
+        rtb.drawLine co.Value 1. pPrev.Value p
         pPrev.Value <- p
 
   /// マウスを離したら、まだ引いてない分の線を引いて、線引き終わり
@@ -42,7 +42,7 @@ type PenDrawRTB (label:Label,rtb:RenderTargetBitmap) as __ =
     label.MouseLeave.toggled <| fun e ->
       let p = __.getMousePos e
       if pPrev.IsSome then
-        rtb.drawLine Colors.Black 1. pPrev.Value p
+        rtb.drawLine co.Value 1. pPrev.Value p
       pPrev.Clear
 
   /// マウスを上げたら、線引き終わり

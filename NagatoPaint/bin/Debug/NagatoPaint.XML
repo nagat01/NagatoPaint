@@ -5,14 +5,6 @@
 <member name="T:AssemblyAttributes">
 
 </member>
-<member name="">
-
-</member>
-<member name="M:Np.Color.hexLetterToInt(System.Char)">
-<summary>
- 16進数の文字を整数値に変換
-</summary>
-</member>
 <member name="T:Np.Color">
 
 </member>
@@ -46,6 +38,9 @@
 </summary>
 </member>
 <member name="T:Np.Main_Canvas">
+
+</member>
+<member name="">
 
 </member>
 <member name="">
