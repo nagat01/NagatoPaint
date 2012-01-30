@@ -8,7 +8,8 @@ open Np
 
 open System.Globalization
 let parseHexNumber hex = 
-  Int32.TryParse(hex, NumberStyles.HexNumber, CultureInfo("en-US"))
+  let success , value = Int32.TryParse(hex, NumberStyles.HexNumber, null)
+  if success then Some value else None
 
 /// 現在の色を表示
 /// 現在の色を数値で指定
@@ -20,9 +21,9 @@ type ColorPanel(width, height, co:Color sv) as sp =
     textBox.TextChanged =>~ 
       fun _ -> 
         let hex = textBox.Text
-        let success , value = parseHexNumber hex
-        if success then 
-          Color.ofHex value |> co.Update
+        match parseHexNumber hex with
+        | Some value -> Color.ofHex value |> co.Update
+        | _ -> ()
 
     co.Updated =>~ 
       fun co -> label |> bgco co
