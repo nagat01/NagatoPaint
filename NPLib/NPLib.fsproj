@@ -34,15 +34,15 @@
   <Import Project="$(MSBuildExtensionsPath32)\FSharp\1.0\Microsoft.FSharp.Targets" Condition="!Exists('$(MSBuildBinPath)\Microsoft.Build.Tasks.v4.0.dll')" />
   <Import Project="$(MSBuildExtensionsPath32)\..\Microsoft F#\v4.0\Microsoft.FSharp.Targets" Condition=" Exists('$(MSBuildBinPath)\Microsoft.Build.Tasks.v4.0.dll')" />
   <ItemGroup>
-    <Compile Include="Base.Operators.fs" />
-    <Compile Include="Base.Objects.fs" />
-    <Compile Include="Base.Geometry.fs" />
-    <Compile Include="Base.Extensions.fs" />
-    <Compile Include="Wpf.Utility.fs" />
-    <Compile Include="Wpf.Extensions.fs" />
-    <Compile Include="Wpf.UiFuncs.fs" />
-    <Compile Include="Wpf.MainWindow.fs" />
-    <Compile Include="RTB.fs" />
+    <Compile Include="Base_Operators.fs" />
+    <Compile Include="Base_Objects.fs" />
+    <Compile Include="Base_Geometry.fs" />
+    <Compile Include="Base_Extensions.fs" />
+    <Compile Include="Wpf_Utility.fs" />
+    <Compile Include="Wpf_Extensions.fs" />
+    <Compile Include="Wpf_UiFunctions.fs" />
+    <Compile Include="MainUi_Window.fs" />
+    <Compile Include="Ui_RTB.fs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="mscorlib" />

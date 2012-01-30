@@ -1,5 +1,5 @@
 ﻿[<AutoOpen>]
-module Base.Geometry
+module Np.Base_Geometry
 
 open System.Windows
                                     

@@ -1,12 +1,12 @@
 ﻿[<AutoOpen>]
-module Wpf.Functions
+module Np.Wpf_UiFunctions
 
 open System.Windows
 open System.Windows.Controls   
 open System.Windows.Input
 open System.Windows.Media
 
-open Base
+open Np
 
 let msg x = MessageBox.Show(sprintf "%A" x)
     

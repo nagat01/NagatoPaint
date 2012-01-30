@@ -1,12 +1,12 @@
 ﻿[<AutoOpen>]
-module Wpf.MainWindow
+module Np.MainUi_Window
 
 open System.Windows
 open System.Windows.Controls
 open System.Windows.Input
 open System.Windows.Media
 
-open Base
+open Np
 
 /// メインウィンドウ
 type MainWindow() as win =

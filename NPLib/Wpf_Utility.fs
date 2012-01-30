@@ -1,5 +1,5 @@
 ﻿[<AutoOpen>]
-module Wpf.Utility
+module Np.Wpf_Utility
 
 open System.Windows
 open System.Windows.Controls

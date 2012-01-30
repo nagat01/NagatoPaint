@@ -7,17 +7,17 @@ open System.Windows.Input
 open System.Windows.Media
 open System.Windows.Media.Imaging
 
-open Base
-open Wpf
+open Np
+
 
 
 
 /// 画面全体
-let dp全体 = DockPanel() $ bgco Colors.Black
-sp左 |> dp全体.addLeft
-label |> dp全体.add
+let dpMain = DockPanel() $ bgco Colors.Black
+spLeft |> dpMain.addLeft
+label |> dpMain.add
 
-let win = Window(Content=dp全体)
+let win = Window(Content=dpMain)
 
 [<EntryPoint>][<STAThread>]
 let main _ = (Application()).Run win

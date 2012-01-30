@@ -1,7 +1,8 @@
-﻿module Model
+﻿[<AutoOpen>]
+module Np.MainData_Color
 
 open System.Windows.Media
 
-open Base
+open Np
 
 let SelectedColor = sv Colors.Black

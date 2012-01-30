@@ -1,13 +1,12 @@
 ﻿[<AutoOpen>]
-module RTB
+module Np.Ui_RTB
 
 open System.Windows.Controls
 open System.Windows.Input
 open System.Windows.Media
 open System.Windows.Media.Imaging
 
-open Base
-open Wpf
+open Np
 
 type RenderTargetBitmap with
   /// 直線を描画する

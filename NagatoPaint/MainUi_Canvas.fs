@@ -1,11 +1,10 @@
 ﻿[<AutoOpen>]
-module Canvas
+module Np.Main_Canvas
 
 open System.Windows.Controls
 open System.Windows.Media
 open System.Windows.Media.Imaging
-open Base
-open Wpf
+open Np
 
 /// 描画されるビットマップ
 let rtb = RenderTargetBitmap(600, 600, 96., 96., PixelFormats.Pbgra32) 

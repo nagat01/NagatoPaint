@@ -8,21 +8,55 @@
 <member name="">
 
 </member>
+<member name="M:Np.Color.hexLetterToInt(System.Char)">
+<summary>
+ 16進数の文字を整数値に変換
+</summary>
+</member>
+<member name="T:Np.Color">
+
+</member>
 <member name="">
 
 </member>
-<member name="P:Canvas.rtb">
+<member name="T:Np.MainData_Color">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="T:Np.MainUi_ColorPallets">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="P:Np.Main_Canvas.rtb">
 <summary>
  描画されるビットマップ
 </summary>
 </member>
-<member name="T:Canvas">
+<member name="T:Np.Main_Canvas">
 
 </member>
 <member name="">
 
 </member>
-<member name="T:Model">
+<member name="P:Np.Main_SpLeft.spLeft">
+<summary>
+ 左側のStackPanel
+</summary>
+</member>
+<member name="T:Np.Main_SpLeft">
 
 </member>
 <member name="">
@@ -31,23 +65,12 @@
 <member name="">
 
 </member>
-<member name="P:Program.dp全体">
+<member name="P:Program.dpMain">
 <summary>
  画面全体
 </summary>
 </member>
 <member name="T:Program">
-
-</member>
-<member name="">
-
-</member>
-<member name="P:Sp左.sp左">
-<summary>
- 左側のStackPanel
-</summary>
-</member>
-<member name="T:Sp左">
 
 </member>
 </members>

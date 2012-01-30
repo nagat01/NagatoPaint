@@ -2,7 +2,7 @@
 <doc>
 <assembly><name>NPLib</name></assembly>
 <members>
-<member name="T:Base.Extensions">
+<member name="T:Np.Base_Extensions">
 
 </member>
 <member name="">
@@ -14,7 +14,7 @@
 <member name="">
 
 </member>
-<member name="T:Base.Geometry">
+<member name="T:Np.Base_Geometry">
 
 </member>
 <member name="">
@@ -38,7 +38,7 @@
 <member name="">
 
 </member>
-<member name="T:Base.Objects.Toggler">
+<member name="T:Np.Base_Objects.Toggler">
 <summary>
  トグルする
  fToOn  オンにする時に実行する関数
@@ -51,32 +51,32 @@
 <member name="">
 
 </member>
-<member name="P:Base.Objects.OptionBox`1.Value(`0)">
+<member name="P:Np.Base_Objects.OptionBox`1.Value(`0)">
 <summary>
  値をセット、ゲット
 </summary>
 </member>
-<member name="P:Base.Objects.OptionBox`1.Value">
+<member name="P:Np.Base_Objects.OptionBox`1.Value">
 <summary>
  値をセット、ゲット
 </summary>
 </member>
-<member name="P:Base.Objects.OptionBox`1.IsSome">
+<member name="P:Np.Base_Objects.OptionBox`1.IsSome">
 <summary>
  値はあるか？
 </summary>
 </member>
-<member name="P:Base.Objects.OptionBox`1.IsNone">
+<member name="P:Np.Base_Objects.OptionBox`1.IsNone">
 <summary>
  値はないか？
 </summary>
 </member>
-<member name="P:Base.Objects.OptionBox`1.Clear">
+<member name="P:Np.Base_Objects.OptionBox`1.Clear">
 <summary>
  値を消去
 </summary>
 </member>
-<member name="M:Base.Objects.OptionBox`1.Apply(Microsoft.FSharp.Core.FSharpFunc`2{`0,Microsoft.FSharp.Core.Unit})">
+<member name="M:Np.Base_Objects.OptionBox`1.Apply(Microsoft.FSharp.Core.FSharpFunc`2{`0,Microsoft.FSharp.Core.Unit})">
 <summary>
  値があれば関数を適用
 </summary>
@@ -84,7 +84,7 @@
 <member name="">
 
 </member>
-<member name="T:Base.Objects.OptionBox`1">
+<member name="T:Np.Base_Objects.OptionBox`1">
 <summary>
  ないかもしれない値を管理するオブジェクト
 </summary>
@@ -119,38 +119,38 @@
 <member name="">
 
 </member>
-<member name="T:Base.Objects.SharedValue`1">
+<member name="T:Np.Base_Objects.SharedValue`1">
 <summary>
  変更を同期させる値
 </summary>
 </member>
-<member name="T:Base.Objects">
+<member name="T:Np.Base_Objects">
 
 </member>
 <member name="">
 
 </member>
-<member name="M:Base.Operators.op_EqualsGreater``1(System.IObservable{``0},Microsoft.FSharp.Core.FSharpFunc`2{``0,Microsoft.FSharp.Core.Unit})">
+<member name="M:Np.Base_Operators.op_EqualsGreater``1(System.IObservable{``0},Microsoft.FSharp.Core.FSharpFunc`2{``0,Microsoft.FSharp.Core.Unit})">
 <summary>
  イベントを追加する
 </summary>
 </member>
-<member name="M:Base.Operators.op_LessPlusPlusGreater``2(System.IObservable{``0},System.IObservable{``1})">
+<member name="M:Np.Base_Operators.op_LessPlusPlusGreater``2(System.IObservable{``0},System.IObservable{``1})">
 <summary>
  イベントを合体(型なし)
 </summary>
 </member>
-<member name="M:Base.Operators.op_LessPlusGreater``1">
+<member name="M:Np.Base_Operators.op_LessPlusGreater``1">
 <summary>
  イベントを合体
 </summary>
 </member>
-<member name="M:Base.Operators.op_Dollar``1(``0,Microsoft.FSharp.Core.FSharpFunc`2{``0,Microsoft.FSharp.Core.Unit})">
+<member name="M:Np.Base_Operators.op_Dollar``1(``0,Microsoft.FSharp.Core.FSharpFunc`2{``0,Microsoft.FSharp.Core.Unit})">
 <summary>
  メソッドチェーン
 </summary>
 </member>
-<member name="T:Base.Operators">
+<member name="T:Np.Base_Operators">
 
 </member>
 <member name="">
@@ -162,12 +162,38 @@
 <member name="">
 
 </member>
-<member name="P:RTB.PenDrawRTB.Toggler">
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="T:Np.MainUi_Window.MainWindow">
+<summary>
+ メインウィンドウ
+</summary>
+</member>
+<member name="T:Np.MainUi_Window">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="P:Np.Ui_RTB.PenDrawRTB.Toggler">
 <summary>
  トグルする
 </summary>
 </member>
-<member name="M:RTB.PenDrawRTB.getMousePos(System.Windows.Input.MouseEventArgs)">
+<member name="M:Np.Ui_RTB.PenDrawRTB.getMousePos(System.Windows.Input.MouseEventArgs)">
 <summary>
  コントロール上を基準としてマウスの位置を取得する
 </summary>
@@ -175,26 +201,26 @@
 <member name="">
 
 </member>
-<member name="T:RTB.PenDrawRTB">
+<member name="T:Np.Ui_RTB.PenDrawRTB">
 <summary>
  RenderTargetBitmapを塗る
 </summary>
 </member>
-<member name="T:RTB">
+<member name="T:Np.Ui_RTB">
 
 </member>
 <member name="">
 
 </member>
-<member name="T:Wpf.Extensions">
+<member name="T:Np.Wpf_Extensions">
 
 </member>
-<member name="M:Wpf.Functions.draggable_uie(System.Windows.UIElement)">
+<member name="M:Np.Wpf_UiFunctions.draggable_uie(System.Windows.UIElement)">
 <summary>
  UIElementをドラッグ可能にする
 </summary>
 </member>
-<member name="M:Wpf.Functions.draggable_window(System.Windows.Window)">
+<member name="M:Np.Wpf_UiFunctions.draggable_window(System.Windows.Window)">
 <summary>
  ウィンドウをドラッグ可能にする
 </summary>
@@ -202,27 +228,27 @@
 <member name="">
 
 </member>
-<member name="M:Wpf.Functions.tight_control(System.Windows.Controls.Control)">
+<member name="M:Np.Wpf_UiFunctions.tight_control(System.Windows.Controls.Control)">
 <summary>
  マージン、パディングのないコントロールにする
 </summary>
 </member>
-<member name="M:Wpf.Functions.pdng(System.Windows.Thickness,System.Windows.Controls.Control)">
+<member name="M:Np.Wpf_UiFunctions.pdng(System.Windows.Thickness,System.Windows.Controls.Control)">
 <summary>
  パディングを設定
 </summary>
 </member>
-<member name="M:Wpf.Functions.mgn(System.Windows.Thickness,System.Windows.FrameworkElement)">
+<member name="M:Np.Wpf_UiFunctions.mgn(System.Windows.Thickness,System.Windows.FrameworkElement)">
 <summary>
  マージンを設定
 </summary>
 </member>
-<member name="M:Wpf.Functions.fgco``1(System.Windows.Media.Color,``0)">
+<member name="M:Np.Wpf_UiFunctions.fgco``1(System.Windows.Media.Color,``0)">
 <summary>
  前景色を設定
 </summary>
 </member>
-<member name="M:Wpf.Functions.bgco``1(System.Windows.Media.Color,``0)">
+<member name="M:Np.Wpf_UiFunctions.bgco``1(System.Windows.Media.Color,``0)">
 <summary>
  背景色を設定
 </summary>
@@ -239,46 +265,20 @@
 <member name="">
 
 </member>
-<member name="T:Wpf.Functions">
+<member name="T:Np.Wpf_UiFunctions">
 
 </member>
-<member name="">
-
-</member>
-<member name="">
-
-</member>
-<member name="">
-
-</member>
-<member name="">
-
-</member>
-<member name="">
-
-</member>
-<member name="">
-
-</member>
-<member name="T:Wpf.MainWindow.MainWindow">
-<summary>
- メインウィンドウ
-</summary>
-</member>
-<member name="T:Wpf.MainWindow">
-
-</member>
-<member name="M:Wpf.Utility.toBrush(System.Windows.Media.Color)">
+<member name="M:Np.Wpf_Utility.toBrush(System.Windows.Media.Color)">
 <summary>
  ブラシを追加する
 </summary>
 </member>
-<member name="M:Wpf.Utility.getCanvasPos(System.Windows.UIElement)">
+<member name="M:Np.Wpf_Utility.getCanvasPos(System.Windows.UIElement)">
 <summary>
  キャンバス上の位置を得る
 </summary>
 </member>
-<member name="T:Wpf.Utility">
+<member name="T:Np.Wpf_Utility">
 
 </member>
 </members>

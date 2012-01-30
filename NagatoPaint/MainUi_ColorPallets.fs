@@ -1,11 +1,11 @@
-﻿module ColorPallets
+﻿[<AutoOpen>]
+module Np.MainUi_ColorPallets
 
-open Base
-open Wpf
 open System.Windows.Controls
 open System.Windows.Media
 open System.Windows.Media.Imaging
 
+open Np
 
 type ColorPallet(color: Color sv) as label =
   inherit Label()

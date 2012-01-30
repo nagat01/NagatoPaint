@@ -1,5 +1,5 @@
 ﻿[<AutoOpen>]
-module Wpf.Extensions
+module Np.Wpf_Extensions
 
 open System.Windows
 open System.Windows.Controls

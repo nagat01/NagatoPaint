@@ -1,5 +1,5 @@
 ﻿[<AutoOpen>]
-module Base.Objects
+module Np.Base_Objects
 
 /// 変更を同期させる値
 type SharedValue<'a when 'a : equality>(value:'a) =

@@ -1,5 +1,5 @@
 ﻿[<AutoOpen>]
-module Base.Operators
+module Np.Base_Operators
 
 /// メソッドチェーン
 let ($) x f = f x ; x

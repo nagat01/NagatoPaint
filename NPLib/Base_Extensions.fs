@@ -1,5 +1,5 @@
 ﻿[<AutoOpen>]
-module Base.Extensions
+module Np.Base_Extensions
 
 open System
 open System.Windows
