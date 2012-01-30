@@ -1,2 +1,2 @@
-‰´ˆÈŠOŽg—p‹ÖŽ~
+Paint program for non-illustrator.
 
