@@ -1,2 +1,2 @@
-Paint program for non-illustrator.
+Paint program for non-illustrators.
 
