@@ -1,5 +1,5 @@
 ﻿[<AutoOpen>]
-module Np.Wpf_Utility
+module Util
 
 open System.Windows
 open System.Windows.Controls   
@@ -14,17 +14,16 @@ extern int GetWindowDC(int hwnd)
 [<DllImport("user32")>]
 extern int ReleaseDC(int hWnd, int hDC)
 
-[<AutoOpen>]
 module Wpf =
   /// キャンバス上の位置を得る
-  let getCanvasPos (uie:UIElement) =
+  let posOnCanvas (uie:UIElement) =
     Point(Canvas.GetLeft uie , Canvas.GetTop uie)
 
   /// ブラシを追加する
-  let toBrush c = SolidColorBrush c
+  let brush c = SolidColorBrush c
 
-  /// Win32APIでPixelを得る
-  let getPixel (p:Point) =
+  /// Win32APIである点の色を得る
+  let screenPointColor (p:Point) =
     let dc = GetWindowDC(0)
     let i = GetPixel(dc, int p.X, int p.Y)
     ReleaseDC(0,dc) |> ignore

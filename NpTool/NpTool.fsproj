@@ -2,18 +2,17 @@
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{6992b09d-11b3-4bd6-83ab-4620e1c1a579}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
-    <RootNamespace>NagatoPaint</RootNamespace>
-    <AssemblyName>NagatoPaint</AssemblyName>
+    <ProjectGuid>{fcdfcbe2-a43b-483f-887f-465f82340815}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>NpTool</RootNamespace>
+    <AssemblyName>NpTool</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
-    <Name>NagatoPaint</Name>
+    <Name>NpTool</Name>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -21,33 +20,17 @@
     <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <WarningLevel>3</WarningLevel>
-    <PlatformTarget>x86</PlatformTarget>
-    <DocumentationFile>bin\Debug\NagatoPaint.XML</DocumentationFile>
+    <DocumentationFile>bin\Debug\NpTool.XML</DocumentationFile>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <Tailcalls>true</Tailcalls>
     <OutputPath>bin\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <WarningLevel>3</WarningLevel>
-    <PlatformTarget>x86</PlatformTarget>
-    <DocumentationFile>bin\Release\NagatoPaint.XML</DocumentationFile>
+    <DocumentationFile>bin\Release\NpTool.XML</DocumentationFile>
   </PropertyGroup>
-  <Import Project="$(MSBuildExtensionsPath32)\FSharp\1.0\Microsoft.FSharp.Targets" Condition="!Exists('$(MSBuildBinPath)\Microsoft.Build.Tasks.v4.0.dll')" />
-  <Import Project="$(MSBuildExtensionsPath32)\..\Microsoft F#\v4.0\Microsoft.FSharp.Targets" Condition=" Exists('$(MSBuildBinPath)\Microsoft.Build.Tasks.v4.0.dll')" />
-  <ItemGroup>
-    <Compile Include="FileUi.fs" />
-    <Compile Include="ToolUi.fs" />
-    <Compile Include="ColorUi.fs" />
-    <Compile Include="BrushUi.fs" />
-    <Compile Include="SpLeft.fs" />
-    <Compile Include="LayerUi.fs" />
-    <Compile Include="SpRight.fs" />
-    <Compile Include="NpCanvas.fs" />
-    <Compile Include="Program.fs" />
-    <None Include="Color.fsx" />
-  </ItemGroup>
   <ItemGroup>
     <Reference Include="mscorlib" />
     <Reference Include="FSharp.Core" />
@@ -61,6 +44,10 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="WbSpray.fs" />
+    <Compile Include="WbEraser.fs" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\NpBase\NpBase.fsproj">
       <Name>NpBase</Name>
       <Project>{46a9f0bf-b2d5-445a-aaa2-acd13f0d069b}</Project>
@@ -71,22 +58,14 @@
       <Project>{ba72b2ee-1805-4012-9910-c8622f2d5592}</Project>
       <Private>True</Private>
     </ProjectReference>
-    <ProjectReference Include="..\NpTool\NpTool.fsproj">
-      <Name>NpTool</Name>
-      <Project>{fcdfcbe2-a43b-483f-887f-465f82340815}</Project>
-      <Private>True</Private>
-    </ProjectReference>
-    <ProjectReference Include="..\NpUi\NpUi.fsproj">
-      <Name>NpUi</Name>
-      <Project>{86eac901-487d-4815-8ad1-07f16f6cefac}</Project>
-      <Private>True</Private>
-    </ProjectReference>
     <ProjectReference Include="..\NpWpf\NpWpf.fsproj">
       <Name>NpWpf</Name>
       <Project>{886c5a7f-af77-4f1c-9b76-94dd1b1c866e}</Project>
       <Private>True</Private>
     </ProjectReference>
   </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\FSharp\1.0\Microsoft.FSharp.Targets" Condition="!Exists('$(MSBuildBinPath)\Microsoft.Build.Tasks.v4.0.dll')" />
+  <Import Project="$(MSBuildExtensionsPath32)\..\Microsoft F#\v4.0\Microsoft.FSharp.Targets" Condition=" Exists('$(MSBuildBinPath)\Microsoft.Build.Tasks.v4.0.dll')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
 	     Other similar extension points exist, see Microsoft.Common.targets.
 	<Target Name="BeforeBuild">

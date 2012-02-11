@@ -5,12 +5,12 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{cae12dde-83f6-436b-92b3-b95d54db2cf4}</ProjectGuid>
+    <ProjectGuid>{46a9f0bf-b2d5-445a-aaa2-acd13f0d069b}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>NPLib</RootNamespace>
-    <AssemblyName>NPLib</AssemblyName>
+    <RootNamespace>NpBase</RootNamespace>
+    <AssemblyName>NpBase</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <Name>NPLib</Name>
+    <Name>NpBase</Name>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -20,7 +20,7 @@
     <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <WarningLevel>3</WarningLevel>
-    <DocumentationFile>bin\Debug\NPLib.XML</DocumentationFile>
+    <DocumentationFile>bin\Debug\NpBase.XML</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -29,23 +29,8 @@
     <OutputPath>bin\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <WarningLevel>3</WarningLevel>
-    <DocumentationFile>bin\Release\NPLib.XML</DocumentationFile>
+    <DocumentationFile>bin\Release\NpBase.XML</DocumentationFile>
   </PropertyGroup>
-  <Import Project="$(MSBuildExtensionsPath32)\FSharp\1.0\Microsoft.FSharp.Targets" Condition="!Exists('$(MSBuildBinPath)\Microsoft.Build.Tasks.v4.0.dll')" />
-  <Import Project="$(MSBuildExtensionsPath32)\..\Microsoft F#\v4.0\Microsoft.FSharp.Targets" Condition=" Exists('$(MSBuildBinPath)\Microsoft.Build.Tasks.v4.0.dll')" />
-  <ItemGroup>
-    <Compile Include="Base_Operators.fs" />
-    <Compile Include="Base_Objects.fs" />
-    <Compile Include="Base_Math.fs" />
-    <Compile Include="Base_Geometry.fs" />
-    <Compile Include="Base_Color.fs" />
-    <Compile Include="Base_Extensions.fs" />
-    <Compile Include="Wpf_Utility.fs" />
-    <Compile Include="Wpf_Extensions.fs" />
-    <Compile Include="Wpf_UiFunctions.fs" />
-    <Compile Include="MainUi_Window.fs" />
-    <Compile Include="Ui_ColorPanel.fs" />
-  </ItemGroup>
   <ItemGroup>
     <Reference Include="mscorlib" />
     <Reference Include="FSharp.Core" />
@@ -58,6 +43,16 @@
     <Reference Include="UIAutomationTypes" />
     <Reference Include="WindowsBase" />
   </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Op.fs" />
+    <Compile Include="Objs.fs" />
+    <Compile Include="TE.fs" />
+    <Compile Include="Math.fs" />
+    <Compile Include="Geom.fs" />
+    <Compile Include="Co.fs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\FSharp\1.0\Microsoft.FSharp.Targets" Condition="!Exists('$(MSBuildBinPath)\Microsoft.Build.Tasks.v4.0.dll')" />
+  <Import Project="$(MSBuildExtensionsPath32)\..\Microsoft F#\v4.0\Microsoft.FSharp.Targets" Condition=" Exists('$(MSBuildBinPath)\Microsoft.Build.Tasks.v4.0.dll')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
 	     Other similar extension points exist, see Microsoft.Common.targets.
 	<Target Name="BeforeBuild">

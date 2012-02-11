@@ -13,7 +13,7 @@ let parseHexNumber hex =
 
 /// 現在の色を表示
 /// 現在の色を数値で指定
-type ColorPanel(width, height, color:Color sv) as sp =
+type ColorPanel(width, height, color:Color sh) as sp =
   inherit StackPanel()
   let label = Label() $ sz width height $ sp.add
   let textBox = TextBox() $ w width $ sp.add
@@ -22,8 +22,8 @@ type ColorPanel(width, height, color:Color sv) as sp =
       fun _ -> 
         let hex = textBox.Text
         match parseHexNumber hex with
-        | Some value -> Color.ofHex value |> color.Update
+        | Some value -> Color.ofHex value |> color.Change
         | _ -> ()
 
-    color.Updated =>~ 
+    color.Changed =>~ 
       fun co -> label |> bgco co

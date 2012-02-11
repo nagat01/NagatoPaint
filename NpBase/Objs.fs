@@ -1,30 +1,58 @@
 ﻿[<AutoOpen>]
-module Np.Base_Objects
+module Objs
 
 open System
 
-/// 変更を同期させる値
-type Shared<'a>(value:'a) =
+type SyncValue<'a 
+  when 'a : struct 
+  and  'a : equality> 
+  (value:'a) =
   let mutable _value = value
-  /// 変更通知イベント
   let changed = Event<'a>()
-  let inits = ResizeArray<unit Lazy>()
-  /// 値
+
   member __.V = _value
 
   member __.Change value =
+    if _value <> value then
+      _value <- value
+      changed.Trigger _value
+
+  member __.Changed = changed.Publish
+
+  member __.Init = changed.Trigger _value
+    
+type sv<'a 
+  when 'a : struct 
+  and  'a : equality> = 
+  SyncValue<'a>
+
+/// 変更を
+type SyncObject<'a
+  when 'a : not struct>
+  (value:'a) =
+  let mutable _value = value
+  /// 変更通知イベント
+  let changed = Event<'a>()
+  let inits   = Event<unit>()
+  /// 値
+  member __.V = _value
+
+  member __.Update f =
+    f _value
+    __.Init
+
+  member __.Replace value =
     _value <- value
     changed.Trigger _value
   
   member __.Changed = changed.Publish
-  member __.AddInits init = inits.Add init
+  member __.AddInit f = inits.Publish.Add f
 
-  member __.Initialize = 
+  member __.Init = 
     _value |> changed.Trigger
-    for init in inits do
-      init.Value
+    inits.Trigger ()
 
-type sh<'a> = Shared<'a>
+type so<'a when 'a : not struct> = SyncObject<'a>
 
 
 /// ないかもしれない値を管理するオブジェクト
