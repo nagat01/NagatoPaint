@@ -17,6 +17,7 @@ type ColorPanel(width, height, color:Color sv) as sp =
   inherit StackPanel()
   let label = Label() $ sz width height $ sp.add
   let textBox = TextBox() $ w width $ sp.add
+  let changeLabel co = label |> bgco co
   do 
     textBox.TextChanged =>~ fun _ -> 
       let hex = textBox.Text
@@ -26,6 +27,7 @@ type ColorPanel(width, height, color:Color sv) as sp =
 
     color.Changed =>~ 
       fun co -> label |> bgco co
+
 
 
 

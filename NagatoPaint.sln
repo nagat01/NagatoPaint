@@ -8,15 +8,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{552C
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "NagatoPaint", "NagatoPaint\NagatoPaint.fsproj", "{6992B09D-11B3-4BD6-83AB-4620E1C1A579}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "NpBase", "NpBase\NpBase.fsproj", "{46A9F0BF-B2D5-445A-AAA2-ACD13F0D069B}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Base", "Base\Base.fsproj", "{46A9F0BF-B2D5-445A-AAA2-ACD13F0D069B}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "NpWpf", "NpWpf\NpWpf.fsproj", "{886C5A7F-AF77-4F1C-9B76-94DD1B1C866E}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Wpf", "Wpf\Wpf.fsproj", "{886C5A7F-AF77-4F1C-9B76-94DD1B1C866E}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "NpUi", "NpUi\NpUi.fsproj", "{86EAC901-487D-4815-8AD1-07F16F6CEFAC}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Ui", "Ui\Ui.fsproj", "{86EAC901-487D-4815-8AD1-07F16F6CEFAC}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "NpModel", "NpModel\NpModel.fsproj", "{BA72B2EE-1805-4012-9910-C8622F2D5592}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Model", "Model\Model.fsproj", "{BA72B2EE-1805-4012-9910-C8622F2D5592}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "NpTool", "NpTool\NpTool.fsproj", "{FCDFCBE2-A43B-483F-887F-465F82340815}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Tool", "Tool\Tool.fsproj", "{FCDFCBE2-A43B-483F-887F-465F82340815}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Sandbox", "Sandbox\Sandbox.fsproj", "{C2A9CA81-8ED7-4ED3-BBAE-E703A9135E8E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -88,6 +90,16 @@ Global
 		{FCDFCBE2-A43B-483F-887F-465F82340815}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{FCDFCBE2-A43B-483F-887F-465F82340815}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{FCDFCBE2-A43B-483F-887F-465F82340815}.Release|x86.ActiveCfg = Release|Any CPU
+		{C2A9CA81-8ED7-4ED3-BBAE-E703A9135E8E}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{C2A9CA81-8ED7-4ED3-BBAE-E703A9135E8E}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{C2A9CA81-8ED7-4ED3-BBAE-E703A9135E8E}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{C2A9CA81-8ED7-4ED3-BBAE-E703A9135E8E}.Debug|x86.ActiveCfg = Debug|x86
+		{C2A9CA81-8ED7-4ED3-BBAE-E703A9135E8E}.Debug|x86.Build.0 = Debug|x86
+		{C2A9CA81-8ED7-4ED3-BBAE-E703A9135E8E}.Release|Any CPU.ActiveCfg = Release|x86
+		{C2A9CA81-8ED7-4ED3-BBAE-E703A9135E8E}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{C2A9CA81-8ED7-4ED3-BBAE-E703A9135E8E}.Release|Mixed Platforms.Build.0 = Release|x86
+		{C2A9CA81-8ED7-4ED3-BBAE-E703A9135E8E}.Release|x86.ActiveCfg = Release|x86
+		{C2A9CA81-8ED7-4ED3-BBAE-E703A9135E8E}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -6,7 +6,12 @@ open System.Windows.Controls
 open System.Windows.Input
 open System.Windows.Media
 
-let msg x = MessageBox.Show(sprintf "%A" x)
+/// メッセージボックス
+let msg x = MessageBox.Show(sprintf "%A" x) |> ignore
+/// ボタン
+let btn title = Button(Content=title)
+
+// プロパティの設定 //
     
 let inline w w ctrl = 
   (^T:(member set_Width : float->unit)(ctrl,w))

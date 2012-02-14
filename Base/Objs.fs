@@ -3,6 +3,8 @@ module Objs
 
 open System
 
+
+
 type SyncValue<'a 
   when 'a : struct 
   and  'a : equality> 
@@ -53,6 +55,77 @@ type SyncObject<'a
     inits.Trigger ()
 
 type so<'a when 'a : not struct> = SyncObject<'a>
+
+
+
+//type WeakEvent<'a>() =
+//  let handlers : WeakReference ResizeArray = ResizeArray()
+//  member __.Add f = handlers.Add (WeakReference f)
+//  member __.Trigger value =
+//    let deadHandlers = ResizeArray()
+//    for handler in handlers do
+//      if handler.IsAlive then
+//        let f : 'a -> unit = downcast handler.Target
+//        f value
+//      else
+//        deadHandlers.Add handler
+//    for handler in deadHandlers do
+//      handlers.Remove handler |> ignore
+//
+//type SyncValue<'a 
+//  when 'a : struct 
+//  and  'a : equality> 
+//  (value:'a) =
+//  let mutable _value = value
+//  let changed = WeakEvent<'a>()
+//
+//  member __.V = _value
+//
+//  member __.Change value =
+//    if _value <> value then
+//      _value <- value
+//      changed.Trigger _value
+//
+//  member __.AddChanged f = changed.Add f
+//
+//  member __.Init = changed.Trigger _value
+//    
+//type sv<'a 
+//  when 'a : struct 
+//  and  'a : equality> = 
+//  SyncValue<'a>
+//
+///// 変更を
+//type SyncObject<'a
+//  when 'a : not struct>
+//  (value:'a) =
+//  let mutable _value = value
+//  /// 変更通知イベント
+//  let changes = WeakEvent<'a>()
+//  let inits = WeakEvent<unit>()
+//
+//  /// 値
+//  member __.V = _value
+//
+//  member __.Update f =
+//    f _value
+//    __.Init
+//
+//  member __.Replace value =
+//    _value <- value
+//    changes.Trigger _value
+//
+//  member __.AddChanged (f:'a -> unit) =
+//    changes.Add f
+//    
+//  member __.AddInit (f:unit -> unit) = 
+//    inits.Add f
+//
+//  member __.Init = 
+//    changes.Trigger _value 
+//    inits.Trigger ()
+//
+//type so<'a when 'a : not struct> = SyncObject<'a>
 
 
 /// ないかもしれない値を管理するオブジェクト

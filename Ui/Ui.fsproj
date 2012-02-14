@@ -5,12 +5,12 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{886c5a7f-af77-4f1c-9b76-94dd1b1c866e}</ProjectGuid>
+    <ProjectGuid>{86eac901-487d-4815-8ad1-07f16f6cefac}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>NpWpf</RootNamespace>
-    <AssemblyName>NpWpf</AssemblyName>
+    <RootNamespace>NpUi</RootNamespace>
+    <AssemblyName>NpUi</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <Name>NpWpf</Name>
+    <Name>NpUi</Name>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -20,7 +20,7 @@
     <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <WarningLevel>3</WarningLevel>
-    <DocumentationFile>bin\Debug\NpWpf.XML</DocumentationFile>
+    <DocumentationFile>bin\Debug\NpUi.XML</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -29,7 +29,7 @@
     <OutputPath>bin\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <WarningLevel>3</WarningLevel>
-    <DocumentationFile>bin\Release\NpWpf.XML</DocumentationFile>
+    <DocumentationFile>bin\Release\NpUi.XML</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="mscorlib" />
@@ -44,15 +44,17 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Util.fs" />
-    <Compile Include="Helper.fs" />
-    <Compile Include="TE.fs" />
-    <Compile Include="Bitmap.fs" />
+    <Compile Include="ColorUi.fs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\NpBase\NpBase.fsproj">
-      <Name>NpBase</Name>
+    <ProjectReference Include="..\Base\Base.fsproj">
+      <Name>Base</Name>
       <Project>{46a9f0bf-b2d5-445a-aaa2-acd13f0d069b}</Project>
+      <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\Wpf\Wpf.fsproj">
+      <Name>Wpf</Name>
+      <Project>{886c5a7f-af77-4f1c-9b76-94dd1b1c866e}</Project>
       <Private>True</Private>
     </ProjectReference>
   </ItemGroup>
